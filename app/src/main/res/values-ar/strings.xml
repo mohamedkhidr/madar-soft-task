@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">الرئيسية</string>
+    <string name="name">الإسم</string>
+    <string name="age">العمر</string>
+    <string name="job_title">الوظيفة</string>
+    <string name="gender">النوع</string>
+    <string name="name_required">الإسم مطلوب</string>
+    <string name="age_required">العمر مطلوب</string>
+    <string name="job_title_required">الوظيفة مطلوبة</string>
+    <string name="gender_required">النوع مطلوب</string>
+    <string name="select_gender">اختر النوع</string>
+    <string name="save">حفظ</string>
+    <string name="data_inserted">تم الإدخال بنجاح</string>
+    <string name="history">العناصر المحفوظة</string>
+    <string name="name_">Name:</string>
+    <string name="age_">Age:</string>
+    <string name="job_title_">Job title:</string>
+    <string name="gender_">Gender:</string>
+    <string-array name="gender_list" >
+        <item >ذكر</item>
+        <item >انثي</item>
+    </string-array>
+</resources>

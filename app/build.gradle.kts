@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
+    id("kotlin-kapt")
     kotlin("kapt")
 }
 
@@ -18,6 +19,12 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    kapt{
+        correctErrorTypes = true
+    }
+
+    dataBinding { enable = true }
+    buildFeatures { viewBinding = true }
 
     buildTypes {
         release {
@@ -77,11 +84,19 @@ dependencies {
     // Activity KTX for viewModels()
     implementation(libs.activity.ktx)
 
+// Fragment KTX
+    implementation(libs.androidx.fragment.ktx)
+
     //Dagger - Hilt
     implementation(libs.hilt.android)
     kapt (libs.hilt.android.compiler)
 
-    
+    // Epoxy
+    implementation(libs.epoxy)
+    kapt ("com.airbnb.android:epoxy-processor:5.1.4")
+    implementation(libs.epoxyDatabinding)
+
+
     implementation(project(":data"))
     implementation(project(":domain"))
 

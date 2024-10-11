@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
 }
 
 android {
@@ -40,4 +41,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    kapt (libs.room.compiler)
+
+    // Kotlin Extensions and Coroutines support for Room
+    implementation(libs.androidx.room.ktx)
+
+
+
+    //Dagger - Hilt
+    implementation(libs.hilt.android)
+    kapt (libs.hilt.android.compiler)
+    implementation(project(":domain"))
 }
